@@ -1,0 +1,11 @@
+:root {
+  --Test-gutter: 2rem;
+}
+
+.Test-object {
+  color:rgba(255,255,255,.5);
+  box-sizing: border-box;
+  margin: calc(0 - var(--Test-gutter));
+  transition-duration: 1s;
+  opacity: 1;
+}
