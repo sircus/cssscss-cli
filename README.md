@@ -28,3 +28,24 @@
   "build" : "node node_modeules/sircus-process-css2scss"
 }
 ```
+
+## Contributing
+To contribute to sircus-process-css2scss, clone this repo locally and commit your code.
+Please check that everything works before opening a pull-request.
+
+```bash
+$ git clone https://github.com/sircus/process-css2scss.git
+$ cd process-css2scss
+$ git checkout -b patch-1
+$ npm install && npm run build
+```
+
+## Acknowledgements
+
+Inspiration and code was taken from many sources, including:  
+
+* [css-scss](https://github.com/jxnblk/css-scss)@[jxnblk](https://github.com/jxnblk)
+* [basscss](https://github.com/basscss/basscss)@[basscss](https://github.com/basscss)
+
+## License
+Released under the MIT license.
