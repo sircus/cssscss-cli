@@ -21,18 +21,18 @@
     "url": "https://github.com/sircus/process-css2scss/issues"
   },
   "dependencies": {
+    "commander":"^2.8.1",
+    "chalk":"^1.0.0",
     "css-scss": "^0.0.7"
   },
   "devDependencies": {},
-  "process": {
-    "css2scss": {
-      "src": "./sandbox/input.css",
-      "build": "./sandbox/output.scss"
-    }
-  },
   "scripts": {
     "clean": "rm -rf ./sandbox/output.scss",
     "css2scss": "node .",
-    "build": "npm run clean && npm run css2scss"
+    "css2scss:cli":"sircus-process-css2scss sandbox/input.css sandbox/_output.scss",
+    "build": "npm run clean && npm run css2scss:cli"
+  },
+  "bin": {
+    "sircus-process-css2scss": "bin/sircus-process-css2scss.js"
   }
 }

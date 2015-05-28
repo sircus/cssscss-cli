@@ -5,29 +5,22 @@
 
 > convert to scss from css4 syntax using css-scss
 
-## Dependencies
 
-* [css-scss](https://github.com/jxnblk/css-scss)
+## Installation
+
+```shell
+$ npm install -g sircus-process-css2scss
+```
 
 
 ## Usage
 
-### package.json
+#### cli
 
-```json
-"devDependencies": {
-  "sircus-process-css2scss": "*"
-},
-"process": {
-  "css2css": {
-    "src": "./input.css",
-    "build": "./output.css",
-  }
-},
-"scripts": {
-  "build" : "node node_modeules/sircus-process-css2scss"
-}
+```shell
+$ sircus-process-css2scss input.css output.scss
 ```
+
 
 ## Contributing
 To contribute to sircus-process-css2scss, clone this repo locally and commit your code.
