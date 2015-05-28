@@ -1,17 +1,18 @@
 {
   "name": "sircus-process-css2scss",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "convert to scss from css4 syntax using css-scss",
   "license": "MIT",
   "homepage": "http://sircus.blivesta.com",
-  "main": "index.js",
   "author": {
     "name":"blivesta",
     "url": "http://blivesta.com"
   },
   "keywords": [
     "css4",
-    "scss"
+    "scss",
+    "css-scss",
+    "cli"
   ],
   "repository": {
     "type": "git",
