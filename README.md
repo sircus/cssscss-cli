@@ -18,20 +18,14 @@ $ npm install -g sircus-process-css2scss
 #### cli
 
 ```shell
-$ sircus-process-css2scss input.css output.scss
+$ css2scss input.css output.scss
 ```
 
 
 ## Contributing
-To contribute to sircus-process-css2scss, clone this repo locally and commit your code.
-Please check that everything works before opening a pull-request.
 
-```bash
-$ git clone https://github.com/sircus/process-css2scss.git
-$ cd process-css2scss
-$ git checkout -b patch-1
-$ npm install && npm run build
-```
+We Need Your Help!
+
 
 ## Acknowledgements
 
