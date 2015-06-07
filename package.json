@@ -34,6 +34,6 @@
     "build": "npm run clean && npm run css2scss:cli"
   },
   "bin": {
-    "sircus-process-css2scss": "bin/sircus-process-css2scss.js"
+    "css2scss": "bin/css2scss.js"
   }
 }
