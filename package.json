@@ -1,6 +1,6 @@
 {
   "name": "sircus-process-css2scss",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "convert to scss from css4 syntax using css-scss",
   "license": "MIT",
   "homepage": "http://sircus.blivesta.com",
@@ -26,7 +26,6 @@
     "chalk":"^1.0.0",
     "css-scss": "^0.0.7"
   },
-  "devDependencies": {},
   "scripts": {
     "clean": "rm -rf ./sandbox/output.scss",
     "css2scss": "node .",
