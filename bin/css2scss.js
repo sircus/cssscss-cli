@@ -20,7 +20,7 @@ if(input || output){
   return transform();
 } else {
   console.error(
-    color.red("%s ERROR: <input-css-file> & <output-scss-file>"), pkg.name
+    color.red("%s ✘ Error: <input-css-file> & <output-scss-file>"), pkg.name
   );
   return program.help();
 };
@@ -32,7 +32,7 @@ function source(){
     return css;
   } catch (err) {
     console.error(
-      color.red("%s ERROR: No such file <input-css-file>"), pkg.name
+      color.red("%s ✘ Error: No such file <input-css-file>"), pkg.name
     );
     throw err
   }
@@ -46,7 +46,7 @@ function transform(){
       throw err
     }
     console.log(
-      color.green("%s SUCCESS: " + program.args[1]), pkg.name
+      color.green("%s ✔ Sucess: " + program.args[1]), pkg.name
     );
   });
 }
