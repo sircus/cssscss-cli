@@ -5,27 +5,19 @@
 
 > convert to scss from css4 syntax, using css-scss
 
-
 ## Installation
 
 ```shell
 $ npm install -g sircus-cssscss-cli
 ```
 
-
 ## Usage
 
+#### `cssscss inputFiles -d outputDir`
+
 ```shell
-$ cssscss input.css output.scss
+$ cssscss src/css/*.css -d dest/css
 ```
-
-
-## Acknowledgements
-
-Inspiration and code was taken from many sources, including:  
-
-* [css-scss](https://github.com/jxnblk/css-scss)@[jxnblk](https://github.com/jxnblk)
-* [basscss](https://github.com/basscss/basscss)@[basscss](https://github.com/basscss)
 
 ## License
 Released under the MIT license.
