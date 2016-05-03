@@ -1,7 +1,7 @@
 # sircus-cssscss-cli
 
 [![npm version](https://img.shields.io/npm/v/sircus-cssscss-cli.svg?style=flat)](https://www.npmjs.com/package/sircus-cssscss-cli)
-[![Build Status](https://img.shields.io/travis/sircus/cssscss/master.svg?style=flat)](https://travis-ci.org/sircus/cssscss)
+[![Build Status](https://img.shields.io/travis/sircus/cssscss/master.svg?style=flat)](https://travis-ci.org/sircus/cssscss-cli)
 
 > convert to scss from css4 syntax, using css-scss
 
