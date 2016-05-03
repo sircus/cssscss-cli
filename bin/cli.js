@@ -1,52 +1,71 @@
 #!/usr/bin/env node
 
-var fs = require("fs");
-var path = require("path");
-var program = require("commander");
-var color = require("chalk");
-var cssscss = require("css-scss");
-var pkg = require("../package.json");
+var color = require('chalk')
+var cssscss = require('css-scss')
+var fs = require('fs')
+var mkdirp = require('mkdirp')
+var minimist = require('minimist')
+var path = require('path')
+var pkg = require('../package.json')
 
-program
-  .version(pkg.version)
-  .usage("[<input> [<output>]]")
-  .parse(process.argv);
+var NAME = pkg.name
 
-var input = program.args[0] ? path.resolve(program.args[0]) : null;
-var output = program.args[1] ? path.resolve(program.args[1]) : null;
+var argv = minimist(process.argv.slice(2), {
+  alias: {
+    d: 'dest',
+    h: 'help',
+    v: 'version',
+  },
+})
+var src = argv._ ? argv._ : []
+var dest = argv.dest ? argv.dest : path.dirname(src[0])
 
+if (argv.dest !== undefined) {
+  mkdirp(dest)
+}
 
-if(input || output){
-  return transform();
+if (argv.version) {
+  console.log(pkg.version)
+}
+
+if (argv.help) {
+  helpMsg()
+}
+
+if (src.length > 0) {
+  return transform()
 } else {
-  console.error(
-    color.red("%s ✘ Error: <input-css-file> & <output-scss-file>"), pkg.name
-  );
-  return program.help();
-};
+  console.error(color.red('✘ Error: <input-files> -d <dest>'), NAME)
+  return helpMsg()
+}
 
-
-function source(){
+function source(file) {
   try {
-    var css = fs.readFileSync(input, "utf8");
-    return css;
+    var css = fs.readFileSync(file, 'utf8')
+    return css
   } catch (err) {
-    console.error(
-      color.red("%s ✘ Error: No such file <input-css-file>"), pkg.name
-    );
+    console.error(color.red('✘ Error: No such file <input-files>'), NAME)
     throw err
   }
 }
 
+function transform() {
+  src.forEach(function (file, i) {
+    var scss = cssscss(source(file))
+    var result = scss
+      .replace(/\r?\n\/\/.Converted Variables\r?\n\r?\n/g, '')
+      .replace(/\r?\n\r?\n\/\/.Custom Media Query Variables\r?\n/g, '')
+    var filename = path.basename(file, '.css')
+    var output = path.resolve(dest + '/_' + filename + '.scss')
+    return fs.writeFileSync(output, result)
+  })
+  console.log(color.green('✔ Success:', NAME))
+}
 
-function transform(){
-  var scss = cssscss(source());
-  return fs.writeFile(output, scss, function(err) {
-    if (err) {
-      throw err
-    }
-    console.log(
-      color.green("%s ✔ Sucess: " + program.args[1]), pkg.name
-    );
-  });
+function helpMsg () {
+  console.log('Usage: cssscss input-files -d output-dir')
+  console.log('')
+  console.log('  -d, --dest')
+  console.log('  -v, --version')
+  console.log('  -h, --help')
 }

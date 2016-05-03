@@ -22,9 +22,10 @@
     "url": "https://github.com/sircus-cssscss-cli/issues"
   },
   "dependencies": {
-    "commander":"^2.8.1",
     "chalk":"^1.0.0",
-    "css-scss": "^0.0.7"
+    "css-scss": "^0.1.0",
+    "mkdirp": "^0.5.1",
+    "minimist": "^1.1.2"
   },
   "scripts": {
     "clean": "rm -rf ./sandbox/output.scss",
