@@ -27,11 +27,16 @@
     "mkdirp": "^0.5.1",
     "minimist": "^1.1.2"
   },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "glob": "^7.0.3",
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.2"
+  },
   "scripts": {
-    "clean": "rm -rf ./sandbox/output.scss",
-    "cssscss": "node .",
-    "cssscss:cli":"cssscss sandbox/input.css sandbox/_output.scss",
-    "build": "npm run clean && npm run cssscss:cli"
+    "build": "npm install -g && cssscss test/fixtures/*.css -d test/scss",
+    "dev": "mocha -w -R spec",
+    "test": "mocha -R spec"
   },
   "bin": {
     "cssscss": "bin/cli.js"

@@ -1,0 +1,19 @@
+:root {
+  --Foo-color: rgba(0, 0, 0, .5);
+  --Foo-width: 20rem;
+}
+
+@custom-media --viewport-sm (min-width: 40em);
+
+.Foo {
+  color: var(--Foo-color);
+  box-sizing: border-box;
+  width: calc(10 + var(--Foo-width));
+  transition-duration: 1s;
+}
+
+@media (--viewport-sm) {
+  .Foo {
+    display: none;
+  }
+}

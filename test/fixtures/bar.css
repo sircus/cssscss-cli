@@ -1,0 +1,19 @@
+:root {
+  --Bar-color: rgba(0, 0, 0, .5);
+  --Bar-width: 20rem;
+}
+
+@custom-media --viewport-sm (min-width: 40em);
+
+.Bar {
+  color: var(--Bar-color);
+  box-sizing: border-box;
+  width: calc(10 + var(--Bar-width));
+  transition-duration: 1s;
+}
+
+@media (--viewport-sm) {
+  .Bar {
+    display: none;
+  }
+}
