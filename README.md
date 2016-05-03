@@ -1,15 +1,15 @@
-# sircus-process-css2scss
+# sircus-cssscss-cli
 
-[![npm version](https://img.shields.io/npm/v/sircus-process-css2scss.svg?style=flat)](https://www.npmjs.com/package/sircus-process-css2scss)
-[![Build Status](https://img.shields.io/travis/sircus/process-css2scss/master.svg?style=flat)](https://travis-ci.org/sircus/process-css2scss)
+[![npm version](https://img.shields.io/npm/v/sircus-cssscss-cli.svg?style=flat)](https://www.npmjs.com/package/sircus-cssscss-cli)
+[![Build Status](https://img.shields.io/travis/sircus/cssscss/master.svg?style=flat)](https://travis-ci.org/sircus/cssscss)
 
-> convert to scss from css4 syntax using css-scss
+> convert to scss from css4 syntax, using css-scss
 
 
 ## Installation
 
 ```shell
-$ npm install -g sircus-process-css2scss
+$ npm install -g sircus-cssscss-cli
 ```
 
 
@@ -20,11 +20,6 @@ $ npm install -g sircus-process-css2scss
 ```shell
 $ css2scss input.css output.scss
 ```
-
-
-## Contributing
-
-We Need Your Help!
 
 
 ## Acknowledgements
