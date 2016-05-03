@@ -29,10 +29,10 @@
   "scripts": {
     "clean": "rm -rf ./sandbox/output.scss",
     "cssscss": "node .",
-    "cssscss:cli":"sircus-cssscss sandbox/input.css sandbox/_output.scss",
+    "cssscss:cli":"cssscss sandbox/input.css sandbox/_output.scss",
     "build": "npm run clean && npm run cssscss:cli"
   },
   "bin": {
-    "cssscss": "bin/cssscss.js"
+    "cssscss": "bin/cli.js"
   }
 }
