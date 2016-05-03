@@ -28,11 +28,11 @@
   },
   "scripts": {
     "clean": "rm -rf ./sandbox/output.scss",
-    "css2scss": "node .",
-    "css2scss:cli":"sircus-process-css2scss sandbox/input.css sandbox/_output.scss",
-    "build": "npm run clean && npm run css2scss:cli"
+    "cssscss": "node .",
+    "cssscss:cli":"sircus-cssscss sandbox/input.css sandbox/_output.scss",
+    "build": "npm run clean && npm run cssscss:cli"
   },
   "bin": {
-    "css2scss": "bin/css2scss.js"
+    "cssscss": "bin/cssscss.js"
   }
 }

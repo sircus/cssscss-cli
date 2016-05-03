@@ -15,10 +15,8 @@ $ npm install -g sircus-cssscss-cli
 
 ## Usage
 
-#### cli
-
 ```shell
-$ css2scss input.css output.scss
+$ cssscss input.css output.scss
 ```
 
 
